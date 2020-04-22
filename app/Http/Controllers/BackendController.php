@@ -7,42 +7,42 @@ use Illuminate\Http\Request;
 class BackendController extends Controller
 {
     function GetAddProduct(){
-        echo "Đây là trang AddProduct";
+        return view('backend.product.addproduct');
     }
     function GetAddUser(){
-        echo "Đây là trang GetAddUser";
+        return view('backend.user.adduser');
     }
     function GetCategory(){
-        echo "Đây là trang GetCategory";
+        return view('backend.category.category');
     }
     function GetDetailOrder(){
-        echo "Đây là trang GetDetailOrder";
+        return view('backend.order.detailorder');
     }
     function GetEditCategory(){
-        echo "Đây là trang GetEditCategory";
+        return view('backend.category.editcategory');
     }
     function GetEditProduct(){
-        echo "Đây là trang GetEditProduct";
+        return view('backend.product.editproduct');
     }
     function GetEditUser(){
-        echo "Đây là trang GetEditUser";
+        return view('backend.user.edituser');
     }
     function GetIndex(){
-        echo "Đây là trang GetIndex";
+        return view('backend.index');
     }
     function GetListProduct(){
-        echo "Đây là trang GetListProduct";
+        return view('backend.product.listproduct');
     }
     function GetListUser(){
-        echo "Đây là trang GetListUser";
+        return view('backend.user.listuser');
     }
     function GetLogin(){
-        echo "Đây là trang GetLogin";
+        return view('backend.login.login');
     }
     function GetOrder(){
-        echo "Đây là trang GetOrder";
+        return view('backend.order.order');
     }
     function GetProcessed(){
-        echo "Đây là trang GetProcessed";
+        return view('backend.order.processed');
     }
 }

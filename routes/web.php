@@ -13,25 +13,26 @@
 
 //Route frontend
 
+Route::get('', 'FrontendController@GetIndex');
 Route::group(['prefix' => ''], function () {
     //Product
     Route::group(['prefix' => 'product'], function () {
-        Route::get('shop', 'FrontendController@GetShop');
-        Route::get('detail', 'FrontendController@GetDetail');
+        Route::get('shop', 'FrontendController@GetShop')->name('product.shop');
+        Route::get('detail', 'FrontendController@GetDetail')->name('product.detail');
     });
     //Cart
     Route::group(['prefix' => 'cart'], function () {
-        Route::get('', 'FrontendController@GetCart');
+        Route::get('', 'FrontendController@GetCart')->name('cart');
     });
     //Checkout
     Route::group(['prefix' => 'checkout'], function () {
-        Route::get('complete', 'FrontendController@GetComplete');
-        Route::get('', 'FrontendController@GetCheckout');
+        Route::get('complete', 'FrontendController@GetComplete')->name('checkout.complete');
+        Route::get('', 'FrontendController@GetCheckout')->name('checkout');
     });
     //
-    Route::get('index', 'FrontendController@GetIndex');
-    Route::get('contact', 'FrontendController@GetContact');
-    Route::get('about', 'FrontendController@GetAbout');
+    Route::get('index', 'FrontendController@GetIndex')->name('index');
+    Route::get('contact', 'FrontendController@GetContact')->name('contact');
+    Route::get('about', 'FrontendController@GetAbout')->name('about');
 });
 
 //Route backend
